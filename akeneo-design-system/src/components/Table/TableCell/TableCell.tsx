@@ -1,7 +1,8 @@
 import React, {ReactNode, Ref} from 'react';
 import styled, {css} from 'styled-components';
 import {AkeneoThemedProps, getColor} from '../../../theme';
-import {Image} from '../..';
+import {Image} from '../../../components';
+import {Override} from '../../../shared';
 
 const TableCellContainer = styled.td<{rowTitle: boolean} & AkeneoThemedProps>`
   color: ${getColor('grey', 140)};
@@ -13,8 +14,8 @@ const TableCellContainer = styled.td<{rowTitle: boolean} & AkeneoThemedProps>`
   text-overflow: ellipsis;
   min-width: 0;
 
-  ${props =>
-    props.rowTitle &&
+  ${({rowTitle}) =>
+    rowTitle &&
     css`
       color: ${getColor('brand', 100)};
       font-style: italic;
@@ -27,17 +28,20 @@ const TableCellInnerContainer = styled.div`
   min-height: 24px;
 `;
 
-type TableCellProps = {
-  /**
-   * Content of the cell.
-   */
-  children?: ReactNode;
+type TableCellProps = Override<
+  React.TdHTMLAttributes<HTMLTableCellElement>,
+  {
+    /**
+     * Content of the cell.
+     */
+    children?: ReactNode;
 
-  /**
-   * Define the content as title for the row.
-   */
-  rowTitle?: boolean;
-};
+    /**
+     * Define the content as title for the row.
+     */
+    rowTitle?: boolean;
+  }
+>;
 
 const TableCell = React.forwardRef<HTMLTableCellElement, TableCellProps>(
   ({children, rowTitle = false, ...rest}: TableCellProps, forwardedRef: Ref<HTMLTableCellElement>) => {

@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import styled from 'styled-components';
 import {useTranslate, useNotify, NotificationLevel} from '@akeneo-pim-community/legacy-bridge';
-import {BrokenLinkIcon, AssociationTypesIllustration, Helper, Button} from 'akeneo-design-system';
+import {BrokenLinkIcon, AssociationTypesIllustration, Helper, Button, Table} from 'akeneo-design-system';
 import {
   SearchBar,
   NoDataSection,
@@ -31,28 +31,6 @@ import {QuantifiedAssociationRow} from '../components';
 import {useProducts} from '../hooks';
 
 const MAX_LIMIT = 100;
-
-const HeaderCell = styled.th`
-  text-align: left;
-  font-weight: normal;
-  position: sticky;
-  top: 44px;
-  height: 44px;
-  box-shadow: 0 1px 0 ${({theme}) => theme.color.grey120};
-  background-color: ${({theme}) => theme.color.white};
-  padding-right: 20px;
-  white-space: nowrap;
-
-  :first-child {
-    padding-left: 20px;
-  }
-`;
-
-const TableContainer = styled.table`
-  width: 100%;
-  color: ${({theme}) => theme.color.grey140};
-  border-collapse: collapse;
-`;
 
 const Buttons = styled.div`
   display: flex;
@@ -175,24 +153,26 @@ const QuantifiedAssociations = ({
           </NoDataTitle>
         </NoDataSection>
       ) : (
-        <TableContainer>
-          <thead>
-            <tr>
-              <HeaderCell>{translate('pim_common.image')}</HeaderCell>
-              <HeaderCell>{translate('pim_common.label')}</HeaderCell>
-              <HeaderCell>{translate('pim_common.identifier')}</HeaderCell>
-              {!isCompact && <HeaderCell>{translate('pim_common.completeness')}</HeaderCell>}
-              {!isCompact && (
-                <HeaderCell>{translate('pim_enrich.entity.product.module.associations.variant_products')}</HeaderCell>
-              )}
-              <HeaderCell>{translate('pim_enrich.entity.product.module.associations.quantified.quantity')}</HeaderCell>
-              <HeaderCell />
-            </tr>
-          </thead>
-          <tbody>
-            {filteredCollectionWithProducts.map((row, index) => (
+        <Table>
+          <Table.Header>
+            <Table.HeaderCell>{translate('pim_common.image')}</Table.HeaderCell>
+            <Table.HeaderCell>{translate('pim_common.label')}</Table.HeaderCell>
+            <Table.HeaderCell>{translate('pim_common.identifier')}</Table.HeaderCell>
+            {!isCompact && <Table.HeaderCell>{translate('pim_common.completeness')}</Table.HeaderCell>}
+            {!isCompact && (
+              <Table.HeaderCell>
+                {translate('pim_enrich.entity.product.module.associations.variant_products')}
+              </Table.HeaderCell>
+            )}
+            <Table.HeaderCell>
+              {translate('pim_enrich.entity.product.module.associations.quantified.quantity')}
+            </Table.HeaderCell>
+            <Table.HeaderCell />
+          </Table.Header>
+          <Table.Body>
+            {filteredCollectionWithProducts.map(row => (
               <QuantifiedAssociationRow
-                key={index}
+                key={row.quantifiedLink.identifier}
                 row={row}
                 isCompact={isCompact}
                 parentQuantifiedLink={parentQuantifiedAssociations[getProductsType(row.productType)].find(
@@ -202,8 +182,8 @@ const QuantifiedAssociations = ({
                 onChange={handleChange}
               />
             ))}
-          </tbody>
-        </TableContainer>
+          </Table.Body>
+        </Table>
       )}
     </>
   );
