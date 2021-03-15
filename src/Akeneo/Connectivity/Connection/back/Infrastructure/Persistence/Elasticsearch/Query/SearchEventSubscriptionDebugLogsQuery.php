@@ -116,6 +116,7 @@ class SearchEventSubscriptionDebugLogsQuery implements SearchEventSubscriptionDe
      *  levels?: array,
      *  timestamp_from?: int,
      *  timestamp_to?: int,
+     *  text?:string
      * } $filters
      * @return array<mixed>
      */
@@ -195,7 +196,7 @@ class SearchEventSubscriptionDebugLogsQuery implements SearchEventSubscriptionDe
                 ],
                 [
                     'match' => [
-                        'context' => [
+                        'context_flattened' => [
                             'query' => $filters['text'],
                         ],
                     ],
