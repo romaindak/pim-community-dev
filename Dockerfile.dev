@@ -16,6 +16,7 @@ RUN apt-get update && \
         perceptualdiff \
         php7.4-xdebug \
         procps \
+        tini \
         unzip &&\
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -29,3 +30,5 @@ RUN chmod +x /usr/local/bin/composer
 RUN mkdir -p /var/www/.composer && chown www-data:www-data /var/www/.composer
 
 VOLUME /srv/pim
+
+ENTRYPOINT ["/usr/bin/tini", "--"]
