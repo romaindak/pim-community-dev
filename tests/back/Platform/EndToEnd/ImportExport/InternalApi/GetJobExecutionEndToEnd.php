@@ -2,32 +2,16 @@
 
 namespace AkeneoTest\Platform\EndToEnd\ImportExport\InternalApi;
 
+use Akeneo\Test\Integration\Configuration;
 use AkeneoTest\Platform\EndToEnd\InternalApiTestCase;
 use Doctrine\DBAL\Connection;
 use Symfony\Component\HttpFoundation\Response;
 
 class GetJobExecutionEndToEnd extends InternalApiTestCase
 {
-    /** @var Connection */
-    private $sqlConnection;
+    private Connection $sqlConnection;
 
-    /**
-     * {@inheritdoc}
-     */
-    protected function getConfiguration()
-    {
-        return $this->catalog->useTechnicalCatalog();
-    }
-
-    public function setUp(): void
-    {
-        parent::setUp();
-
-        $this->sqlConnection = $this->get('database_connection');
-        $this->authenticate($this->getAdminUser());
-    }
-
-    public function testGetJobExecution()
+    public function testGetJobExecution(): void
     {
         $jobExecutionId = $this->thereIsAJobTerminated();
 
@@ -46,7 +30,23 @@ class GetJobExecutionEndToEnd extends InternalApiTestCase
         $this->assertSame($this->getExpectedContent($jobExecutionId), json_decode($response->getContent(), true));
     }
 
-    private function thereIsAJobTerminated()
+    /**
+     * {@inheritdoc}
+     */
+    protected function getConfiguration(): Configuration
+    {
+        return $this->catalog->useTechnicalCatalog();
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->sqlConnection = $this->get('database_connection');
+        $this->authenticate($this->getAdminUser());
+    }
+
+    private function thereIsAJobTerminated(): int
     {
         $JobInstanceId = $this->sqlConnection->executeQuery('SELECT id FROM akeneo_batch_job_instance WHERE code = "csv_product_import";')->fetchColumn();
         $insertJobExecution = <<<SQL

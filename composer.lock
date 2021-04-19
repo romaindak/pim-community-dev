@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbec77fa79215f8765c5010ed013f055",
+    "content-hash": "e68abda047acf3832fc03f248cd60685",
     "packages": [
         {
             "name": "ass/xmlsecurity",
@@ -2632,16 +2632,16 @@
         },
         {
             "name": "google/auth",
-            "version": "v1.15.0",
+            "version": "v1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-auth-library-php.git",
-                "reference": "b346c07de6613e26443d7b4830e5e1933b830dc4"
+                "reference": "4e0c9367719df9703e96f5ad613041b87742471c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/b346c07de6613e26443d7b4830e5e1933b830dc4",
-                "reference": "b346c07de6613e26443d7b4830e5e1933b830dc4",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/4e0c9367719df9703e96f5ad613041b87742471c",
+                "reference": "4e0c9367719df9703e96f5ad613041b87742471c",
                 "shasum": ""
             },
             "require": {
@@ -2655,7 +2655,7 @@
             "require-dev": {
                 "guzzlehttp/promises": "0.1.1|^1.3",
                 "kelvinmo/simplejwt": "^0.2.5|^0.5.1",
-                "phpseclib/phpseclib": "^2",
+                "phpseclib/phpseclib": "^2.0.31",
                 "phpunit/phpunit": "^4.8.36|^5.7",
                 "sebastian/comparator": ">=1.2.3",
                 "squizlabs/php_codesniffer": "^3.5"
@@ -2683,9 +2683,9 @@
             "support": {
                 "docs": "https://googleapis.github.io/google-auth-library-php/master/",
                 "issues": "https://github.com/googleapis/google-auth-library-php/issues",
-                "source": "https://github.com/googleapis/google-auth-library-php/tree/v1.15.0"
+                "source": "https://github.com/googleapis/google-auth-library-php/tree/v1.15.1"
             },
-            "time": "2021-02-05T20:50:04+00:00"
+            "time": "2021-04-21T17:42:05+00:00"
         },
         {
             "name": "google/cloud-core",
@@ -2805,60 +2805,6 @@
             "time": "2020-10-13T13:31:20+00:00"
         },
         {
-            "name": "google/cloud-storage",
-            "version": "v1.23.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/googleapis/google-cloud-php-storage.git",
-                "reference": "ca3817dae90d7d757381f3f63c9d7df58ca1416f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-storage/zipball/ca3817dae90d7d757381f3f63c9d7df58ca1416f",
-                "reference": "ca3817dae90d7d757381f3f63c9d7df58ca1416f",
-                "shasum": ""
-            },
-            "require": {
-                "google/cloud-core": "^1.39",
-                "google/crc32": "^0.1.0"
-            },
-            "require-dev": {
-                "erusev/parsedown": "^1.6",
-                "google/cloud-pubsub": "^1.0",
-                "phpdocumentor/reflection": "^3.0",
-                "phpseclib/phpseclib": "^2",
-                "phpunit/phpunit": "^4.8|^5.0",
-                "squizlabs/php_codesniffer": "2.*"
-            },
-            "suggest": {
-                "google/cloud-pubsub": "May be used to register a topic to receive bucket notifications.",
-                "phpseclib/phpseclib": "May be used in place of OpenSSL for creating signed Cloud Storage URLs. Please require version ^2."
-            },
-            "type": "library",
-            "extra": {
-                "component": {
-                    "id": "cloud-storage",
-                    "target": "googleapis/google-cloud-php-storage.git",
-                    "path": "Storage",
-                    "entry": "src/StorageClient.php"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Google\\Cloud\\Storage\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "Cloud Storage Client for PHP",
-            "support": {
-                "source": "https://github.com/googleapis/google-cloud-php-storage/tree/v1.23.1"
-            },
-            "time": "2021-01-13T22:28:48+00:00"
-        },
-        {
             "name": "google/common-protos",
             "version": "1.3",
             "source": {
@@ -2900,52 +2846,6 @@
                 "source": "https://github.com/googleapis/common-protos-php/tree/1.3"
             },
             "time": "2020-08-26T16:05:09+00:00"
-        },
-        {
-            "name": "google/crc32",
-            "version": "v0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/google/php-crc32.git",
-                "reference": "a8525f0dea6fca1893e1bae2f6e804c5f7d007fb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/google/php-crc32/zipball/a8525f0dea6fca1893e1bae2f6e804c5f7d007fb",
-                "reference": "a8525f0dea6fca1893e1bae2f6e804c5f7d007fb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^1.13 || v2.14.2",
-                "paragonie/random_compat": ">=2",
-                "phpunit/phpunit": "^4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Google\\CRC32\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Andrew Brampton",
-                    "email": "bramp@google.com"
-                }
-            ],
-            "description": "Various CRC32 implementations",
-            "homepage": "https://github.com/google/php-crc32",
-            "support": {
-                "issues": "https://github.com/google/php-crc32/issues",
-                "source": "https://github.com/google/php-crc32/tree/v0.1.0"
-            },
-            "time": "2019-05-09T06:24:58+00:00"
         },
         {
             "name": "google/gax",
@@ -3722,55 +3622,42 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.1.3",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "9be3b16c877d477357c015cec057548cf9b2a14a"
+                "reference": "27ea64cc9d61ae7b6a5f04bebf062d89dd18e8f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/9be3b16c877d477357c015cec057548cf9b2a14a",
-                "reference": "9be3b16c877d477357c015cec057548cf9b2a14a",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/27ea64cc9d61ae7b6a5f04bebf062d89dd18e8f7",
+                "reference": "27ea64cc9d61ae7b6a5f04bebf062d89dd18e8f7",
                 "shasum": ""
             },
             "require": {
-                "ext-fileinfo": "*",
-                "league/mime-type-detection": "^1.3",
-                "php": "^7.2.5 || ^8.0"
+                "ext-json": "*",
+                "league/mime-type-detection": "^1.0.0",
+                "php": "^7.2 || ^8.0"
             },
             "conflict": {
-                "league/flysystem-sftp": "<1.0.6"
+                "guzzlehttp/ringphp": "<1.1.1"
             },
             "require-dev": {
-                "phpspec/prophecy": "^1.11.1",
-                "phpunit/phpunit": "^8.5.8"
-            },
-            "suggest": {
-                "ext-fileinfo": "Required for MimeType",
-                "ext-ftp": "Allows you to use FTP server storage",
-                "ext-openssl": "Allows you to use FTPS server storage",
-                "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
-                "league/flysystem-aws-s3-v3": "Allows you to use S3 storage with AWS SDK v3",
-                "league/flysystem-azure": "Allows you to use Windows Azure Blob storage",
-                "league/flysystem-cached-adapter": "Flysystem adapter decorator for metadata caching",
-                "league/flysystem-eventable-filesystem": "Allows you to use EventableFilesystem",
-                "league/flysystem-rackspace": "Allows you to use Rackspace Cloud Files",
-                "league/flysystem-sftp": "Allows you to use SFTP server storage via phpseclib",
-                "league/flysystem-webdav": "Allows you to use WebDAV storage",
-                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter",
-                "spatie/flysystem-dropbox": "Allows you to use Dropbox storage",
-                "srmklive/flysystem-dropbox-v2": "Allows you to use Dropbox storage for PHP 5 applications"
+                "async-aws/s3": "^1.5",
+                "async-aws/simple-s3": "^1.0",
+                "aws/aws-sdk-php": "^3.132.4",
+                "composer/semver": "^3.0",
+                "ext-fileinfo": "*",
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "google/cloud-storage": "^1.23",
+                "phpseclib/phpseclib": "^2.0",
+                "phpstan/phpstan": "^0.12.26",
+                "phpunit/phpunit": "^8.5 || ^9.4"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "League\\Flysystem\\": "src/"
+                    "League\\Flysystem\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3780,73 +3667,66 @@
             "authors": [
                 {
                     "name": "Frank de Jonge",
-                    "email": "info@frenky.net"
+                    "email": "info@frankdejonge.nl"
                 }
             ],
-            "description": "Filesystem abstraction: Many filesystems, one API.",
+            "description": "File storage abstraction for PHP",
             "keywords": [
-                "Cloud Files",
                 "WebDAV",
-                "abstraction",
                 "aws",
                 "cloud",
-                "copy.com",
-                "dropbox",
-                "file systems",
+                "file",
                 "files",
                 "filesystem",
                 "filesystems",
                 "ftp",
-                "rackspace",
-                "remote",
                 "s3",
                 "sftp",
                 "storage"
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/1.x"
+                "source": "https://github.com/thephpleague/flysystem/tree/2.0.5"
             },
             "funding": [
                 {
                     "url": "https://offset.earth/frankdejonge",
-                    "type": "other"
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/frankdejonge",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/league/flysystem",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2020-08-23T07:39:11+00:00"
+            "time": "2021-04-11T15:03:35+00:00"
         },
         {
-            "name": "league/flysystem-ziparchive",
-            "version": "1.0.3",
+            "name": "league/flysystem-memory",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/flysystem-ziparchive.git",
-                "reference": "c6d7c7ea23a57ee802d533ab9eb9f19dd5c5fc45"
+                "url": "https://github.com/thephpleague/flysystem-memory.git",
+                "reference": "f644026c705b8a501543f38cb8b745a603aa4952"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-ziparchive/zipball/c6d7c7ea23a57ee802d533ab9eb9f19dd5c5fc45",
-                "reference": "c6d7c7ea23a57ee802d533ab9eb9f19dd5c5fc45",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-memory/zipball/f644026c705b8a501543f38cb8b745a603aa4952",
+                "reference": "f644026c705b8a501543f38cb8b745a603aa4952",
                 "shasum": ""
             },
             "require": {
-                "ext-zip": "*",
-                "league/flysystem": "~1.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "0.9.*",
-                "phpunit/phpunit": "~4.0"
+                "ext-fileinfo": "*",
+                "league/flysystem": "^2.0.0",
+                "php": "^7.2 || ^8.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "League\\Flysystem\\ZipArchive\\": "src/"
+                    "League\\Flysystem\\InMemory\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3856,15 +3736,22 @@
             "authors": [
                 {
                     "name": "Frank de Jonge",
-                    "email": "info@frenky.net"
+                    "email": "info@frankdejonge.nl"
                 }
             ],
-            "description": "Flysystem adapter for ZipArchive's",
+            "description": "In-memory filesystem adapter for Flysystem.",
+            "keywords": [
+                "Flysystem",
+                "file",
+                "files",
+                "filesystem",
+                "memory"
+            ],
             "support": {
-                "issues": "https://github.com/thephpleague/flysystem-ziparchive/issues",
-                "source": "https://github.com/thephpleague/flysystem-ziparchive/tree/master"
+                "issues": "https://github.com/thephpleague/flysystem-memory/issues",
+                "source": "https://github.com/thephpleague/flysystem-memory/tree/2.0.5"
             },
-            "time": "2016-12-20T08:36:16+00:00"
+            "time": "2021-02-12T19:24:17+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -3924,16 +3811,16 @@
         },
         {
             "name": "liip/imagine-bundle",
-            "version": "2.5.0",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "a04aa405272a9aff3c9e25dd015a1073f9f291a6"
+                "reference": "afa4193c7fde027426ebb19e73878cd026438bbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/a04aa405272a9aff3c9e25dd015a1073f9f291a6",
-                "reference": "a04aa405272a9aff3c9e25dd015a1073f9f291a6",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/afa4193c7fde027426ebb19e73878cd026438bbd",
+                "reference": "afa4193c7fde027426ebb19e73878cd026438bbd",
                 "shasum": ""
             },
             "require": {
@@ -3954,7 +3841,7 @@
                 "doctrine/persistence": "^1.3|^2.0",
                 "enqueue/enqueue-bundle": "^0.9|^0.10",
                 "ext-gd": "*",
-                "league/flysystem": "^1.0",
+                "league/flysystem": "^1.0|^2.0",
                 "psr/log": "^1.0",
                 "symfony/browser-kit": "^3.4|^4.3|^5.0",
                 "symfony/console": "^3.4|^4.3|^5.0",
@@ -4014,9 +3901,9 @@
             ],
             "support": {
                 "issues": "https://github.com/liip/LiipImagineBundle/issues",
-                "source": "https://github.com/liip/LiipImagineBundle/tree/2.5.0"
+                "source": "https://github.com/liip/LiipImagineBundle/tree/2.6.0"
             },
-            "time": "2021-02-08T15:10:40+00:00"
+            "time": "2021-03-31T06:42:04+00:00"
         },
         {
             "name": "maennchen/zipstream-php",
@@ -4394,80 +4281,58 @@
         },
         {
             "name": "oneup/flysystem-bundle",
-            "version": "3.7.0",
+            "version": "4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1up-lab/OneupFlysystemBundle.git",
-                "reference": "de1aa0fa361496b3837da5cac286f029595581da"
+                "reference": "45ca36fb5ebb73a7e7a8e98435df7d3f24898f84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1up-lab/OneupFlysystemBundle/zipball/de1aa0fa361496b3837da5cac286f029595581da",
-                "reference": "de1aa0fa361496b3837da5cac286f029595581da",
+                "url": "https://api.github.com/repos/1up-lab/OneupFlysystemBundle/zipball/45ca36fb5ebb73a7e7a8e98435df7d3f24898f84",
+                "reference": "45ca36fb5ebb73a7e7a8e98435df7d3f24898f84",
                 "shasum": ""
             },
             "require": {
-                "league/flysystem": "^1.0.26",
-                "php": ">=7.1",
-                "symfony/config": "^3.4 || ^4.0 || ^5.0",
-                "symfony/dependency-injection": "^3.4 || ^4.0 || ^5.0",
-                "symfony/http-kernel": "^3.4 || ^4.0 || ^5.0"
-            },
-            "conflict": {
-                "async-aws/flysystem-s3": "<1.0"
+                "league/flysystem": "^2.0",
+                "php": "^7.4 || ^8.0",
+                "symfony/config": "^4.4 || ^5.0",
+                "symfony/dependency-injection": "^4.4 || ^5.0",
+                "symfony/http-kernel": "^4.4 || ^5.1.5"
             },
             "require-dev": {
-                "async-aws/flysystem-s3": "^1.0",
-                "jenko/flysystem-gaufrette": "^1.0",
-                "league/flysystem-aws-s3-v2": "^1.0",
-                "league/flysystem-azure-blob-storage": "^0.1",
-                "league/flysystem-cached-adapter": "^1.0",
-                "league/flysystem-gridfs": "^1.0",
-                "league/flysystem-memory": "^1.0",
-                "league/flysystem-rackspace": "^1.0",
-                "league/flysystem-replicate-adapter": "^1.0",
-                "league/flysystem-sftp": "^1.0",
-                "league/flysystem-webdav": "^1.0",
-                "league/flysystem-ziparchive": "^1.0",
-                "litipk/flysystem-fallback-adapter": "^0.1",
-                "phpunit/phpunit": "^6.5 || ^7.5 || ^8.5",
-                "spatie/flysystem-dropbox": "^1.0",
-                "superbalist/flysystem-google-storage": "^4.0",
-                "symfony/asset": "^3.4 || ^4.0 || ^5.0",
-                "symfony/browser-kit": "^3.4 || ^4.0 || ^5.0",
-                "symfony/finder": "^3.4 || ^4.0 || ^5.0",
-                "symfony/templating": "^3.4 || ^4.0 || ^5.0",
-                "symfony/translation": "^3.4 || ^4.0 || ^5.0",
-                "symfony/yaml": "^3.4 || ^4.0 || ^5.0",
-                "twistor/flysystem-stream-wrapper": "^1.0"
+                "ext-simplexml": "*",
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "league/flysystem-async-aws-s3": "^2.0",
+                "league/flysystem-aws-s3-v3": "^2.0",
+                "league/flysystem-ftp": "^2.0",
+                "league/flysystem-memory": "^2.0",
+                "league/flysystem-sftp": "^2.0",
+                "phpstan/phpstan": "^0.12.10",
+                "phpunit/phpunit": "^8.5",
+                "royvoetman/flysystem-gitlab-storage": "^2.0",
+                "symfony/asset": "^4.4 || ^5.0",
+                "symfony/browser-kit": "^4.4 || ^5.0",
+                "symfony/finder": "^4.4 || ^5.0",
+                "symfony/framework-bundle": "^4.4 || ^5.0",
+                "symfony/phpunit-bridge": "^5.0",
+                "symfony/templating": "^4.4 || ^5.0",
+                "symfony/translation": "^4.4 || ^5.0",
+                "symfony/yaml": "^4.4 || ^5.0"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
                 "ext-ftp": "Required for FTP and SFTP",
-                "jenko/flysystem-gaufrette": "Allows you to use gaufrette adapter",
-                "league/flysystem-aws-s3-v2": "Use S3 storage with AWS SDK v2",
+                "league/flysystem-async-aws-s3": "Use flysystem S3 adapter from AsyncAws",
                 "league/flysystem-aws-s3-v3": "Use S3 storage with AWS SDK v3",
-                "league/flysystem-azure-blob-storage": "Allows you to use Azure Blob Storage adapter",
-                "league/flysystem-cached-adapter": "Flysystem adapter decorator for metadata caching",
-                "league/flysystem-gridfs": "Allows you to use GridFS adapter",
-                "league/flysystem-rackspace": "Allows you to use Rackspace Cloud Files",
-                "league/flysystem-replicate-adapter": "Allows you to use the Replicate adapter from Flysystem",
                 "league/flysystem-sftp": "Allows SFTP server storage via phpseclib",
-                "league/flysystem-webdav": "Allows you to use WebDAV storage",
-                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter",
-                "litipk/flysystem-fallback-adapter": "Allows you to use a fallback filesystem",
-                "spatie/flysystem-dropbox": "Use Dropbox storage",
-                "superbalist/flysystem-google-storage": "Allows you to use Google Cloud Storage buckets",
-                "twistor/flysystem-stream-wrapper": "Allows you to use stream wrapper"
+                "royvoetman/flysystem-gitlab-storage": "Use Gitlab Storage filesystem for Flysystem"
             },
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
-                    "Oneup\\FlysystemBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
+                    "Oneup\\FlysystemBundle\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4497,9 +4362,9 @@
             ],
             "support": {
                 "issues": "https://github.com/1up-lab/OneupFlysystemBundle/issues",
-                "source": "https://github.com/1up-lab/OneupFlysystemBundle/tree/3.7.0"
+                "source": "https://github.com/1up-lab/OneupFlysystemBundle/tree/4.0.6"
             },
-            "time": "2020-12-22T08:19:35+00:00"
+            "time": "2021-03-02T16:16:18+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -5253,57 +5118,6 @@
                 "source": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/tree/v5.6.1"
             },
             "time": "2020-08-25T19:10:18+00:00"
-        },
-        {
-            "name": "superbalist/flysystem-google-storage",
-            "version": "7.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Superbalist/flysystem-google-cloud-storage.git",
-                "reference": "87e2f450c0e4b5200fef9ffe6863068cc873d734"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Superbalist/flysystem-google-cloud-storage/zipball/87e2f450c0e4b5200fef9ffe6863068cc873d734",
-                "reference": "87e2f450c0e4b5200fef9ffe6863068cc873d734",
-                "shasum": ""
-            },
-            "require": {
-                "google/cloud-storage": "~1.0",
-                "league/flysystem": "~1.0",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "0.9.*",
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Superbalist\\Flysystem\\GoogleStorage\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Superbalist.com a division of Takealot Online (Pty) Ltd",
-                    "email": "info@superbalist.com"
-                }
-            ],
-            "description": "Flysystem adapter for Google Cloud Storage",
-            "support": {
-                "issues": "https://github.com/Superbalist/flysystem-google-cloud-storage/issues",
-                "source": "https://github.com/Superbalist/flysystem-google-cloud-storage/tree/7.2.2"
-            },
-            "time": "2019-10-10T12:22:54+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -11988,36 +11802,31 @@
         },
         {
             "name": "league/flysystem-aws-s3-v3",
-            "version": "1.0.29",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-aws-s3-v3.git",
-                "reference": "4e25cc0582a36a786c31115e419c6e40498f6972"
+                "reference": "43b4cea4fc0d80378d947c306df96a749cdded35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/4e25cc0582a36a786c31115e419c6e40498f6972",
-                "reference": "4e25cc0582a36a786c31115e419c6e40498f6972",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-aws-s3-v3/zipball/43b4cea4fc0d80378d947c306df96a749cdded35",
+                "reference": "43b4cea4fc0d80378d947c306df96a749cdded35",
                 "shasum": ""
             },
             "require": {
-                "aws/aws-sdk-php": "^3.20.0",
-                "league/flysystem": "^1.0.40",
-                "php": ">=5.5.0"
+                "aws/aws-sdk-php": "^3.132.4",
+                "league/flysystem": "^2.0.0",
+                "league/mime-type-detection": "^1.0.0",
+                "php": "^7.2 || ^8.0"
             },
-            "require-dev": {
-                "henrikbjorn/phpspec-code-coverage": "~1.0.1",
-                "phpspec/phpspec": "^2.0.0"
+            "conflict": {
+                "guzzlehttp/ringphp": "<1.1.1"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "League\\Flysystem\\AwsS3v3\\": "src/"
+                    "League\\Flysystem\\AwsS3V3\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -12027,15 +11836,24 @@
             "authors": [
                 {
                     "name": "Frank de Jonge",
-                    "email": "info@frenky.net"
+                    "email": "info@frankdejonge.nl"
                 }
             ],
-            "description": "Flysystem adapter for the AWS S3 SDK v3.x",
+            "description": "AWS S3 filesystem adapter for Flysystem.",
+            "keywords": [
+                "Flysystem",
+                "aws",
+                "file",
+                "files",
+                "filesystem",
+                "s3",
+                "storage"
+            ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem-aws-s3-v3/issues",
-                "source": "https://github.com/thephpleague/flysystem-aws-s3-v3/tree/1.0.29"
+                "source": "https://github.com/thephpleague/flysystem-aws-s3-v3/tree/2.0.5"
             },
-            "time": "2020-10-08T18:58:37+00:00"
+            "time": "2021-04-11T09:05:38+00:00"
         },
         {
             "name": "liuggio/fastest",
@@ -16108,6 +15926,7 @@
         "ext-gd": ">=2.0",
         "ext-imagick": "*",
         "ext-intl": "*",
+        "ext-json": "*",
         "ext-mbstring": "*",
         "ext-pdo": "*",
         "ext-xml": "*",

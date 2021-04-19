@@ -1963,8 +1963,7 @@ class FixturesContext extends BaseFixturesContext
     {
         $requirement = $this->getAttributeRequirement($attribute, $family, $channel);
 
-        Assert::assertNotNull($requirement);
-        Assert::assertFalse($requirement->isRequired());
+        Assert::assertTrue(null === $requirement || false === $requirement->isRequired());
     }
 
     /**
@@ -2031,7 +2030,9 @@ class FixturesContext extends BaseFixturesContext
             ]
         );
 
-        $em->refresh($requirement);
+        if (null !== $requirement) {
+            $em->refresh($requirement);
+        }
 
         return $requirement;
     }
