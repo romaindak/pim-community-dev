@@ -1,0 +1,38 @@
+name: Codecov
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-versions: ["7.4"]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup PHP, with composer and extensions
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions:  apcu, bcmath, curl, exif, fileinfo, gd, imagick, intl, json, mbstring, openssl, pdo, xml, zip
+          coverage: xdebug
+      - name: Build application
+        run: php -d memory_limit=4G /usr/local/bin/composer install
+      - name: Run backend unit tests with coverage
+        run: XDEBUG_MODE=coverage php -d memory_limit=-1 vendor/bin/phpspec run --config=phpspec-coverage.yml.dist
+      - name: Upload test code coverage data on codecov
+        uses: codecov/codecov-action@v1
+        with:
+          files: coverage/coverage-phpspec/coverage.xml
+          flags: unittests
+          name: codecov-umbrella # optional
+          fail_ci_if_error: true # optional (default = false)
+          verbose: false # optional (default = false)
+          token: ${{ secrets.CODECOV_TOKEN }}
